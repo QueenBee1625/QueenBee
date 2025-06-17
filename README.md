@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,73 +6,103 @@
   <title>QueenBee Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
-      margin: 0; padding: 0;
-      background: #f0f0f0;
-      color: #333;
+      background: #000;
+      color: #fff;
     }
+
     header {
-      background-color: #222;
-      color: white;
-      padding: 20px;
+      background-color: #111;
+      color: #FFD700;
+      padding: 30px 20px;
       text-align: center;
     }
+
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
-      color: white;
+      color: #FFD700;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      color: #fff;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
     }
-    h1, h2 {
+
+    h2 {
+      color: #FFD700;
       margin-bottom: 10px;
     }
+
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+      grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
       gap: 20px;
+      margin-top: 20px;
     }
+
     .project {
-      border: 1px solid #ddd;
-      border-radius: 6px;
+      border: 2px solid #FFD700;
+      border-radius: 10px;
       overflow: hidden;
-      background: #fff;
-      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+      background: #111;
+      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
       transition: transform 0.3s;
     }
+
     .project:hover {
       transform: scale(1.05);
     }
+
     .project img {
       width: 100%;
-      height: 150px;
+      height: 180px;
       object-fit: cover;
     }
+
     .project-details {
       padding: 15px;
     }
+
     footer {
       text-align: center;
-      margin: 40px 0;
+      margin: 50px 0 20px;
       font-size: 0.9em;
-      color: #666;
+      color: #999;
+    }
+
+    a {
+      color: #FFD700;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>QueenBee</h1>
+    <p>Freelancer | Creative Thinker</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -83,35 +112,34 @@
 
   <div class="container" id="about">
     <h2>About Me</h2>
-    <p>Creative freelancer who loves exploring ideas and turning them into reality through independent work.</p>
+    <p>I’m QueenBee — a creative freelancer passionate about design, innovation, and turning ideas into stunning digital work.</p>
   </div>
 
   <div class="container" id="projects">
     <h2>My Projects</h2>
     <div class="projects">
       <div class="project">
-        <img src="https://![Screenshot 2025-05-24 081503](https://github.com/user-attachments/assets/aa5771d5-676e-41ea-b2f4-41e4123f49cd)
-/300x150" alt="Crazy Thoughts" />
+        <img src="https://via.placeholder.com/300x150?text=Project+1" alt="Project 1" />
         <div class="project-details">
-          <h3>Project Title 1</h3>
-          <p>Short description about project 1.</p>
+          <h3>Crazy Thoughts</h3>
+          <p>Creative art series exploring abstract digital expression.</p>
         </div>
       </div>
       <div class="project">
-        <img src="https://via.placeholder.com/300x150" alt="Project 2" />
+        <img src="https://via.placeholder.com/300x150?text=Project+2" alt="Project 2" />
         <div class="project-details">
-          <h3>Project Title 2</h3>
-          <p>Short description about project 2.</p>
+          <h3>Brand Kit Design</h3>
+          <p>Full branding and identity kit for small businesses and creators.</p>
         </div>
       </div>
-      <!-- Add more projects as needed -->
+      <!-- Add more project cards below -->
     </div>
   </div>
 
   <div class="container" id="contact">
     <h2>Contact Me</h2>
-    <p>Email: queenbeefreelancing@gmail.com</p>
-    <!-- You can add a form here later -->
+    <p>📧 Email: <a href="mailto:queenbeefreelancing@gmail.com">queenbeefreelancing@gmail.com</a></p>
+    <p>🌐 Instagram: <a href="https://instagram.com/yourusername" target="_blank">@yourusername</a></p>
   </div>
 
   <footer>
@@ -119,4 +147,3 @@
   </footer>
 </body>
 </html>
-
