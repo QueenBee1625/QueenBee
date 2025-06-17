@@ -1,5 +1,4 @@
-# Freelancing
-Services provided 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
