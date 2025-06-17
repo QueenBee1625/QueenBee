@@ -5,7 +5,7 @@ Services provided
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brindha RK | Freelancer</title>
+  <title>QueenBee | Freelancer</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,7 +20,7 @@ Services provided
 </head>
 <body>
   <header>
-    <h1>Brindha RK</h1>
+    <h1>QueenBee</h1>
     <p>Freelancer | Creative Thinker</p>
   </header>
 
@@ -29,12 +29,12 @@ Services provided
   </nav>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Brindha — a passionate freelancer who enjoys creating, exploring, and building things that make a difference. I love working independently and turning ideas into real results.</p>
+    <h2>About</h2>
+    <p>QueenBee is a creative freelancer who loves exploring ideas and turning them into reality through independent work.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Brindha RK. All rights reserved.</p>
+    <p>&copy; 2025 QueenBee. All rights reserved.</p>
   </footer>
 </body>
 </html>
