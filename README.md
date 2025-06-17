@@ -80,17 +80,17 @@
     <h2>My Work</h2>
     <div class="projects">
       <div class="project">
-        <img src="https://via.placeholder.com/300x150" alt="Poster" />
+        <img src="https://via.placeholder.com/300x150" alt="Project 1" />
         <div class="project-details">
           <h3>Digital Poster</h3>
           <p>A creative digital poster made using Canva.</p>
         </div>
       </div>
       <div class="project">
-        <img src="https://via.placeholder.com/300x150" alt="Branding" />
+        <img src="https://via.placeholder.com/300x150" alt="Project 2" />
         <div class="project-details">
           <h3>Freelance Branding</h3>
-          <p>Minimal branding for a small business.</p>
+          <p>Minimal branding for a local business.</p>
         </div>
       </div>
     </div>
