@@ -10,93 +10,6 @@
       margin: 0; padding: 0; box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #000;
-      color: #fff;
-    }
-
-    header {
-      background-color: #111;
-      color: #FFD700;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #FFD700;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #1a1a1a;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-    }
-
-    h2 {
-      color: #FFD700;
-      margin-bottom: 10px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .project {
-      border: 2px solid #FFD700;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #111;
-      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .project:hover {
-      transform: scale(1.05);
-    }
-
-    .project img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .project-details {
-      padding: 15px;
-    }
-
-    footer {
-      text-align: center;
-      margin: 50px 0 20px;
-      font-size: 0.9em;
-      color: #999;
-    }
-
-    a {
-      color: #FFD700;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -106,6 +19,7 @@
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -119,27 +33,50 @@
     <h2>My Projects</h2>
     <div class="projects">
       <div class="project">
-        <img src="https://via.placeholder.com/300x150?text=Project+1" alt="Project 1" />
+        <img src="https://via.placeholder.com/300x150?text=Crazy+Thoughts" alt="Crazy Thoughts" />
         <div class="project-details">
           <h3>Crazy Thoughts</h3>
           <p>Creative art series exploring abstract digital expression.</p>
         </div>
       </div>
       <div class="project">
-        <img src="https://via.placeholder.com/300x150?text=Project+2" alt="Project 2" />
+        <img src="https://via.placeholder.com/300x150?text=Brand+Kit" alt="Brand Kit Design" />
         <div class="project-details">
           <h3>Brand Kit Design</h3>
           <p>Full branding and identity kit for small businesses and creators.</p>
         </div>
       </div>
-      <!-- Add more project cards below -->
+    </div>
+  </div>
+
+  <div class="container" id="gallery">
+    <h2>Gallery</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/300x150?text=Design+1" alt="Gallery Image 1" />
+        <div class="project-details">
+          <h3>Illustration 1</h3>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/300x150?text=Design+2" alt="Gallery Image 2" />
+        <div class="project-details">
+          <h3>Poster Art</h3>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="container" id="contact">
     <h2>Contact Me</h2>
-    <p>📧 Email: <a href="mailto:queenbeefreelancing@gmail.com">queenbeefreelancing@gmail.com</a></p>
-    <p>🌐 Instagram: <a href="https://instagram.com/yourusername" target="_blank">@yourusername</a></p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: <a href="mailto:queenbeefreelancing@gmail.com">queenbeefreelancing@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/yourusername" target="_blank">@yourusername</a></p>
   </div>
 
   <footer>
