@@ -90,8 +90,8 @@
     <h2>My Projects</h2>
     <div class="projects">
       <div class="project">
-        <img src="![Uploading Screenshot 2025-05-24 081503.png…]()
-" alt="Project 1" />
+        <img src="https://![Screenshot 2025-05-24 081503](https://github.com/user-attachments/assets/aa5771d5-676e-41ea-b2f4-41e4123f49cd)
+/300x150" alt="Crazy Thoughts" />
         <div class="project-details">
           <h3>Project Title 1</h3>
           <p>Short description about project 1.</p>
