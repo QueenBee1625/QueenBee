@@ -90,7 +90,8 @@
     <h2>My Projects</h2>
     <div class="projects">
       <div class="project">
-        <img src="https://via.placeholder.com/300x150" alt="Project 1" />
+        <img src="![Uploading Screenshot 2025-05-24 081503.png…]()
+" alt="Project 1" />
         <div class="project-details">
           <h3>Project Title 1</h3>
           <p>Short description about project 1.</p>
@@ -109,7 +110,7 @@
 
   <div class="container" id="contact">
     <h2>Contact Me</h2>
-    <p>Email: your-email@example.com</p>
+    <p>Email: queenbeefreelancing@gmail.com</p>
     <!-- You can add a form here later -->
   </div>
 
