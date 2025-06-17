@@ -12,10 +12,6 @@
     <p>Freelancer | Creative Thinker</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-  </nav>
-
   <section id="about">
     <h2>About</h2>
     <p>QueenBee is a creative freelancer who loves exploring ideas and turning them into reality through independent work.</p>
