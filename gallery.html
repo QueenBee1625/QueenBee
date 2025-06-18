@@ -34,7 +34,8 @@
       max-width: 1000px;
       margin: auto;
     }
-    .gallery img {
+    .gallery img,
+    .gallery video {
       width: 100%;
       border: 3px solid #ffd700;
       border-radius: 10px;
@@ -56,20 +57,33 @@
     </nav>
   </header>
 
- <section class="gallery">
-  <a href="crazy-thoughts.html">
-    <img src="images/Screenshot 2025-05-24 081503.png" alt="Crazy Thoughts" />
-  </a>
-  <a href="sketch-world.html">
-    <img src="images/sample2.jpg" alt="Sketch World" />
-  </a>
-  <a href="photo-dreams.html">
-    <img src="images/sample3.jpg" alt="Photo Dreams" />
-  </a>
-</section>
+  <section class="gallery">
+    <!-- Image links -->
+    <a href="crazy-thoughts.html">
+      <img src="images/Screenshot 2025-05-24 081503.png" alt="Crazy Thoughts" />
+    </a>
+    <a href="sketch-world.html">
+      <img src="images/sample2.jpg" alt="Sketch World" />
+    </a>
+    <a href="photo-dreams.html">
+      <img src="images/sample3.jpg" alt="Photo Dreams" />
+    </a>
+
+    <!-- Video block -->
+    <video controls>
+      <source src="videos/queenbee_intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls>
+      <source src="videos/project_showcase.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
 
   <footer>
     &copy; 2025 QueenBee. All rights reserved.
   </footer>
 </body>
 </html>
+
