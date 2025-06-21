@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoot | QueenBee</title>
+  <style>
+    body {
+      background: black;
+      color: #ffd700;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+    a {
+      color: #ffd700;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%;
+      border: 2px solid #ffd700;
+      border-radius: 10px;
+    }
+       #musicToggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  user-select: none;
+  font-size: 16px;
+  width: auto;        /* Important to prevent full width */
+  height: auto;       /* Let height fit content */
+  min-width: 40px;    /* Optional: minimum size */
+}
 
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Crazy Thoughts</h1>
+    <a href="gallery.html">← Back to Gallery</a>
+  </header>
+
+  <section class="gallery">
+    <img src="images/WhatsApp Image 2025-06-21 at 11.23.50_6f8b518e.jpg" alt="Shoot 1" />
+    <img src="images/WhatsApp Image 2025-06-21 at 11.23.28_ff31ed20.jpg" alt="Shoot 2" />
+    <img src="images/WhatsApp Image 2025-06-21 at 11.23.04_52000341.jpg" alt="Shoot 3" />
+    <!-- Add more if needed -->
+  </section>
+</body>
+</html>
+ <!-- Music Control Button -->
+  <button id="musicToggle" aria-label="Toggle Music">⏸️</button>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="audio/whip-afro-dancehall-music-110235.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const toggleBtn = document.getElementById('musicToggle');
+
+    let isPlaying = true;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      music.volume = 0.3;
+      const playPromise = music.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          isPlaying = false;
+          toggleBtn.textContent = '▶️';
+        });
+      }
+    });
+
+    toggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        music.pause();
+        toggleBtn.textContent = '▶️';
+      } else {
+        music.play();
+        toggleBtn.textContent = '⏸️';
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
