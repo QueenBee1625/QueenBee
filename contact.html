@@ -65,48 +65,42 @@
       <strong>Other:</strong> (you can add WhatsApp, Behance, Dribbble, etc.)
     </div>
   </div>
-<!-- Music Control -->
-<div style="text-align: center; margin-bottom: 20px;">
-  <button id="musicToggle" style="padding: 10px 20px; background-color: #ffd700; color: black; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
-    ⏸️ Pause Music
-  </button>
-</div>
+ <!-- Music Control Button -->
+  <button id="musicToggle" aria-label="Toggle Music">⏸️</button>
 
-<audio id="bgMusic" autoplay loop>
-  <source src="audio/whip-afro-dancehall-music-110235.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+  <audio id="bgMusic" autoplay loop>
+    <source src="audio/whip-afro-dancehall-music-110235.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-<script>
-  const music = document.getElementById('bgMusic');
-  const toggleBtn = document.getElementById('musicToggle');
+  <script>
+    const music = document.getElementById('bgMusic');
+    const toggleBtn = document.getElementById('musicToggle');
 
-  let isPlaying = true;
+    let isPlaying = true;
 
-  // Try to autoplay when the page loads
-  window.addEventListener('DOMContentLoaded', () => {
-    music.volume = 0.3; // Lower volume to avoid annoying users
-    const playPromise = music.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        // Autoplay blocked - change button
-        isPlaying = false;
-        toggleBtn.innerHTML = '▶️ Play Music';
-      });
-    }
-  });
+    window.addEventListener('DOMContentLoaded', () => {
+      music.volume = 0.3;
+      const playPromise = music.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          isPlaying = false;
+          toggleBtn.textContent = '▶️';
+        });
+      }
+    });
 
-  toggleBtn.addEventListener('click', () => {
-    if (isPlaying) {
-      music.pause();
-      toggleBtn.innerHTML = '▶️ Play Music';
-    } else {
-      music.play();
-      toggleBtn.innerHTML = '⏸️ Pause Music';
-    }
-    isPlaying = !isPlaying;
-  });
-</script>
+    toggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        music.pause();
+        toggleBtn.textContent = '▶️';
+      } else {
+        music.play();
+        toggleBtn.textContent = '⏸️';
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
   <footer>
     &copy; 2025 QueenBee. All rights reserved.
   </footer>
