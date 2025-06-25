@@ -11,17 +11,20 @@
       font-family: 'Roboto', sans-serif;
       margin: 0;
     }
+
     header {
       background-color: #111;
       padding: 20px;
       text-align: center;
     }
+
     a {
       color: #ffd700;
       text-decoration: none;
       display: inline-block;
       margin: 10px 20px;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -30,35 +33,60 @@
       max-width: 1000px;
       margin: auto;
     }
+
     .gallery img {
       width: 100%;
       border: 2px solid #ffd700;
       border-radius: 10px;
+      cursor: zoom-in;
+      transition: transform 0.3s;
     }
-       #musicToggle {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  padding: 8px 12px;
-  background-color: #ffd700;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1000;
-  user-select: none;
-  font-size: 16px;
-  width: auto;        /* Important to prevent full width */
-  height: auto;       /* Let height fit content */
-  min-width: 40px;    /* Optional: minimum size */
-}
 
+    /* Modal Styles */
+    #imgModal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    #imgModal img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 5px solid #ffd700;
+      border-radius: 12px;
+      cursor: zoom-out;
+      transition: transform 0.3s ease;
+    }
+
+    #musicToggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      padding: 8px 12px;
+      background-color: #ffd700;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 3000;
+      user-select: none;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Artistry</h1>
+    <h1>Fashion</h1>
     <a href="gallery.html">← Back to Gallery</a>
   </header>
 
@@ -66,11 +94,9 @@
     <img src="images/WhatsApp Image 2025-06-21 at 11.23.50_6f8b518e.jpg" alt="Shoot 1" />
     <img src="images/WhatsApp Image 2025-06-21 at 11.23.28_ff31ed20.jpg" alt="Shoot 2" />
     <img src="images/WhatsApp Image 2025-06-21 at 11.23.04_52000341.jpg" alt="Shoot 3" />
-    <!-- Add more if needed -->
   </section>
-</body>
-</html>
- <!-- Music Control Button -->
+
+  <!-- Music Control Button -->
   <button id="musicToggle" aria-label="Toggle Music">⏸️</button>
 
   <audio id="bgMusic" autoplay loop>
@@ -78,12 +104,19 @@
     Your browser does not support the audio element.
   </audio>
 
+  <!-- Image Modal -->
+  <div id="imgModal">
+    <img id="modalImg" src="" alt="Zoomed" />
+  </div>
+
   <script>
     const music = document.getElementById('bgMusic');
     const toggleBtn = document.getElementById('musicToggle');
-
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
     let isPlaying = true;
 
+    // Music Control
     window.addEventListener('DOMContentLoaded', () => {
       music.volume = 0.3;
       const playPromise = music.play();
@@ -105,8 +138,26 @@
       }
       isPlaying = !isPlaying;
     });
-  </script>
- // Zoom with scroll
+
+    // Modal Logic
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.style.transform = 'scale(1)';
+      });
+    });
+
+    // Close modal on click outside or press ESC
+    modal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') modal.style.display = 'none';
+    });
+
+    // Zoom with scroll
     let scale = 1;
     modalImg.addEventListener('wheel', (e) => {
       e.preventDefault();
