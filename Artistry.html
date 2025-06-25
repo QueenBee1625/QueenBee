@@ -106,3 +106,15 @@
       isPlaying = !isPlaying;
     });
   </script>
+ // Zoom with scroll
+    let scale = 1;
+    modalImg.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      if (e.deltaY < 0) {
+        scale += 0.1;
+      } else {
+        scale = Math.max(1, scale - 0.1);
+      }
+      modalImg.style.transform = `scale(${scale})`;
+    });
+  </script>
